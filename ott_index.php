@@ -25,7 +25,7 @@
       <a href="index.php?id=NETFLIX"><img src="netflix_img.PNG"></a>
       <a href="index.php?id=TVING"><img src="tving_img.PNG"></a>
       <a href="index.php?id=WATCHA"><img src="watcha_img.PNG"></a>
-      <a href="index.php?id=Disney+"><img src="disney+_img.PNG">+</a>
+      <a href="index.php?id=Disney+"><img src="disney+_img.PNG"></a>
     </ol>
     <h2>
       <?php
