@@ -21,19 +21,9 @@
   </head>
   <body>
     <h1>OTT별 콘텐츠 추천</h1>
-    <ol>
       <a href="index.php?id=NETFLIX"><img src="netflix_img.PNG"></a>
       <a href="index.php?id=TVING"><img src="tving_img.PNG"></a>
       <a href="index.php?id=WATCHA"><img src="watcha_img.PNG"></a>
       <a href="index.php?id=Disney+"><img src="disney+_img.PNG"></a>
-    </ol>
-    <h2>
-      <?php
-        echo $_GET['id'];
-      ?>
-    </h2>
-      <?php
-      echo file_get_contents("data/".$_GET['id']);
-       ?>
   </body>
 </html>
