@@ -1,0 +1,22 @@
+CREATE DATABASE CONTENTS_REVIEW;
+
+CREATE TABLE contents(
+    -> id INT(11) NOT NULL AUTO_INCREMENT,
+    -> title VARCHAR(40) NOT NULL,
+    -> ott VARCHAR(20) NOT NULL,
+    -> category VARCHAR(20) NOT NULL,
+    -> PRIMARY KEY(id));
+
+CREATE TABLE review(
+    -> id INT(11) NOT NULL,
+    -> score INT(11) NOT NULL,
+    -> comments TEXT NOT NULL,
+    -> created DATETIME NOT NULL);
+
+
+
+
+
+
+
+나중에 JOIN
