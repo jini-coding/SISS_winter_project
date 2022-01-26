@@ -19,7 +19,6 @@
         background-color:#FFD8D8;
         height : 2000px;
       }
-
       nav, section{
         display : flex;
         justify-content: center;
@@ -45,16 +44,15 @@
     <h1>OTT별 콘텐츠 추천</h1>
     <nav>
       <div id="underline"></div>
-      <a href="#">About</a>
+      <a href="About.php">About</a>
       <a href="#">Board</a>
       <a href="#">Search</a>
     </nav>
     <script>
       let under = document.getElementById("underline");
       let menu = document.querySelectorAll("nav a");
-
       menu.forEach((menu)=>
-        menu.addEventListener("click",(e)=>indicator(e))
+        menu.addEventListener("mouseover",(e)=>indicator(e))
       );
       function indicator(e){
         under.style.left=e.currentTarget.offsetLeft+"px";
@@ -69,11 +67,10 @@
       );
     </script>
     <section>
-      <a href="netflix.html"><img class="netflix_icon" src="netflix_img.PNG"></a>
-      <a href="index.php?id=TVING"><img class="tving_icon" src="tving_img.PNG"></a>
-      <a href="index.php?id=WATCHA"><img class="watcha_icon" src="watcha_img.PNG"></a>
-      <a href="index.php?id=Disney"><img class="disney_icon" src="disney+_img.PNG"></a>
+      <a href="netflix.php"><img class="netflix_icon" src="netflix_img.PNG"></a>
+      <a href="tving.php"><img class="tving_icon" src="tving_img.PNG"></a>
+      <a href="watcha.php"><img class="watcha_icon" src="watcha_img.PNG"></a>
+      <a href="disney.php"><img class="disney_icon" src="disney+_img.PNG"></a>
   </section>
-
   </body>
 </html>
