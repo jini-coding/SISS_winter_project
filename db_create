@@ -14,9 +14,19 @@ CREATE TABLE review(
     -> created DATETIME NOT NULL);
 
 
+INSERT INTO contents(title, ott, category) VALUES('오징어 게임', 'netflix', '웹드라마');
+INSERT INTO contents(title, ott, category) VALUES('', '', '');
 
 
 
+SELECT * FROM contents;
+
+
+INSERT INTO review(score, comments, created) VALUES('', '', NOW());
+
+
+
+SELECT * FROM review;
 
 
 나중에 JOIN
