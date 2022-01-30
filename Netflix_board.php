@@ -79,13 +79,28 @@
     </nav>
 
     <div id="board"><h3>리뷰 작성</h3>
-    <form action="php파일" method="POST">
+    <form action="create.php" method="POST">
       <p>제목 : <select name="title" required>
            <option value="none" selected disabled>==선택==</option>
            <option value="1">제목1</option>
            <option value="2">제목2</option>
            <option value="3">제목3</option>
          </select></p>
+      <p>OTT : <select name="ott" required>
+           <option value="none" selected disabled>==선택==</option>
+           <option value="netflix">Netflix</option>
+           <option value="watcha">Watcha</option>
+           <option value="tving">Tving</option>
+           <option value="disney+">Disney+</option>
+         </select>
+         &nbsp; &nbsp;
+         카테고리 : <select name="category" required>
+           <option value="none" selected disabled>==선택==</option>
+           <option value="movie">영화</option>
+           <option value="drama">드라마</option>
+           <option value="entertain">예능</option>
+         </select></p>
+
       <p>별점 :  (구현예정)</p>
       <p>내용 : <textarea name="review" rows="10" cols="50" placeholder="내용을 입력해주세요"></textarea></p>
       <p style="padding-left:440px;"><input type="submit" value="작성" style=""></p></div>
