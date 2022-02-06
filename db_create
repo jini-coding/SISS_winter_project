@@ -1,5 +1,7 @@
 CREATE DATABASE CONTENTS_REVIEW;
 
+USE CONTENTS_REVIEW;
+
 CREATE TABLE contents(
     -> id INT(11) NOT NULL AUTO_INCREMENT,
     -> title VARCHAR(40) NOT NULL,
@@ -13,20 +15,28 @@ CREATE TABLE review(
     -> comments TEXT NOT NULL,
     -> created DATETIME NOT NULL);
 
+// contents 테이블
+INSERT INTO contents(title, ott, category) VALUES('제목', 'ott', '카테고리');
 
 INSERT INTO contents(title, ott, category) VALUES('오징어 게임', 'netflix', '웹드라마');
-INSERT INTO contents(title, ott, category) VALUES('', '', '');
+INSERT INTO contents(title, ott, category) VALUES('지금 우리 학교는', 'netflix', '웹드라마');
+INSERT INTO contents(title, ott, category) VALUES('불가살', 'netflix', '드라마');
 
-
-
+// contents 테이블 보기
 SELECT * FROM contents;
 
 
-INSERT INTO review(score, comments, created) VALUES('', '', NOW());
+// review 테이블
 
+INSERT INTO review(id, score, comments, created) VALUES('콘텐츠에 해당하는 id', '별점', '코멘트', NOW());
 
+INSERT INTO review(id, score, comments, created) VALUES('1', '3', 'dddd', NOW());
+INSERT INTO review(id, score, comments, created) VALUES('1', '4', 'dgfdgdfgdfg', NOW());
+INSERT INTO review(id, score, comments, created) VALUES('3', '5', 'dgfdgdfg', NOW());
 
+// review 테이블 보기
 SELECT * FROM review;
 
 
-나중에 JOIN
+// JOIN
+SELECT * FROM contents LEFT OUTER JOIN review ON contents.id = review.id;
