@@ -100,7 +100,7 @@
            <option value="4">4</option>
            <option value="5">5</option>
          </select>
-      <p>내용 : <textarea name="review" rows="10" cols="50" placeholder="내용을 입력해주세요"></textarea></p>
+      <p>내용 : <textarea name="comments" rows="10" cols="50" placeholder="내용을 입력해주세요"></textarea></p>
       <p style="padding-left:440px;"><input type="submit" value="작성" style=""></p></div>
   </body>
 </html>
