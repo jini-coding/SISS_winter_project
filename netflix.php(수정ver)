@@ -81,9 +81,6 @@
       <p>OTT : <select name="ott" required>
            <option value="none" selected disabled>==선택==</option>
            <option value="netflix">Netflix</option>
-           <option value="watcha">Watcha</option>
-           <option value="tving">Tving</option>
-           <option value="disney+">Disney+</option>
          </select>
          &nbsp; &nbsp;
          카테고리 : <select name="category" required>
