@@ -7,7 +7,6 @@
         text-align: center;
         padding: 35px;
         color :#A50000;
-        border-bottom:1px solid black;
         font-size: 5em;
         font-family : sans-serif;
       }
@@ -46,7 +45,7 @@
       <div id="underline"></div>
       <a href="About.php">About</a>
       <a href="#">Board</a>
-      <a href="#">Search</a>
+      <a href="Search.php">Search</a>
     </nav>
     <script>
       let under = document.getElementById("underline");
