@@ -10,7 +10,7 @@
     <p>제목 : <textarea name="na" rows="1" cols="20" placeholder="제목을 입력해주세요"></textarea></p>
     <p style="padding-left:440px;"><input type="submit" value="작성" style=""></p>
     <?php
-      $conn=mysqli_connect("localhost", "root", "020325", "contents_review");
+      $conn=mysqli_connect("localhost", "root", "비밀번호", "contents_review");
 
       $titlekey=$_POST['title'];
 
