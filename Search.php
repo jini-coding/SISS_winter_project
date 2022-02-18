@@ -5,12 +5,29 @@
   <meta charset="utf-8">
   <title>search</title>
   <style>
-    li{
-      text-align: left;
-      padding: 10px;
+    #home{
+      border:1px solid black;
+      border-radius : 5px;
+      padding:3px;
+    }
+    #home a{
+      text-decoration:none;
+    }
+    table{
+      text-align: center;
+      padding: 50px;
       color :black;
       font-size: 20px;
       font-family : sans-serif;
+      border-collapse: collapse;
+      margin:auto;
+    }
+    tr{
+      border-top :1px solid black;
+      border-bottom: 1px solid black;
+    }
+    th, td {
+	     padding: 15px;
     }
     h2{
       text-align: center;
@@ -26,6 +43,7 @@
   </style>
 </head>
 <body>
+  <span id="home"><a href="index.php">메인으로</a></span>
   <h2> SEARCH </h2>
   <div id="search_box" style="text-align : center; padding-top : 50px;">
     <form action="Search.php" method="GET">
@@ -39,33 +57,40 @@
     </form>
   </div>
   <?php
+    ini_set('display_errors', '0');
+  ?>
+  <?php
     $catg=$_GET['categ'];
     $search=$_GET['search'];
   ?>
   <p><br><br><br>
   <?php
-    $conn=mysqli_connect("localhost", "root", "비밀번호", "contents_review");
+    $conn=mysqli_connect("localhost", "root", "020325", "contents_review");
     $sql2=" SELECT * FROM contentsreview";
     $result=mysqli_query($conn, $sql2);
-    $list=' ';
-
+    ?>
+    <table>
+      <tr><th>OTT</th> <th>제목</th> <th>별점</th> <th>후기</th></tr>
+    <?php
       while($row=mysqli_fetch_array($result)){
-        if($row['title']==$search){
-          $list = $list."<li>{$row['ott']} - {$row['title']}(별점 : {$row['score']}) : {$row['comments']}";
-          echo $list;
-        }
-        if($row['ott']==$search){
-          $list = $list."<li>{$row['ott']} - {$row['title']}(별점 : {$row['score']}) : {$row['comments']}";
-          echo $list;
-        }
-        if($row['category']==$search){
-          $list = $list."<li>{$row['ott']} - {$row['title']}(별점 : {$row['score']}) : {$row['comments']}";
-          echo $list;
+        if($row['title']==$search or $row['ott']==$search or $row['category']==$search){
+    ?>
+          <tr>
+            <td><?php echo $row['ott']?></td>
+            <td><?php echo $row['title']?></td>
+            <td><?php echo $row['score']?></td>
+            <td><?php echo $row['comments']?></td>
+          </tr>
+    <?php
         }
       }
 
-    mysqli_close($conn);
-  ?>
+      ?>
+    </table>
+    <?php
+      echo "</table>";
+      mysqli_close($conn);
+    ?>
 
 </body>
 </html>
