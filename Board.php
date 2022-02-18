@@ -3,6 +3,22 @@
 <head>
   <meta charset="utf-8">
   <style>
+    table{
+      text-align: center;
+      padding: 50px;
+      color :black;
+      font-size: 20px;
+      font-family : sans-serif;
+      border-collapse: collapse;
+      margin:auto;
+    }
+    tr{
+      border-top :1px solid black;
+      border-bottom: 1px solid black;
+    }
+    th, td {
+       padding: 15px;
+    }
     li{
       text-align: left;
       padding: 10px;
@@ -31,6 +47,10 @@
       $sql2=" SELECT * FROM contentsreview";
       $result=mysqli_query($conn, $sql2);
       $list=' ';
+    ?>
+    <table>
+      <tr><th>OTT</th> <th>제목</th> <th>별점</th> <th>후기</th></tr>
+    <?php
       while($row=mysqli_fetch_array($result)){
         if($row['ott']=='netflix'){
           $row['ott']='NETFLIX';
@@ -44,9 +64,18 @@
         if($row['ott']=='disney+'){
           $row['ott']='DISNEY+';
         }
-        $list = $list."<li>{$row['ott']} - {$row['title']}(별점 : {$row['score']}) : {$row['comments']}";
+      ?>
+        <tr>
+          <td><?php echo $row['ott']?></td>
+          <td><?php echo $row['title']?></td>
+          <td><?php echo $row['score']?></td>
+          <td><?php echo $row['comments']?></td>
+        </tr>
+      <?php
       }
-      echo $list;
+      ?>
+      <?php
+      echo "</table>";
       mysqli_close($conn);
     ?>
 
