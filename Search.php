@@ -65,7 +65,7 @@
   ?>
   <p><br><br><br>
   <?php
-    $conn=mysqli_connect("localhost", "root", "020325", "contents_review");
+    $conn=mysqli_connect("localhost", "root", "비밀번호", "contents_review");
     $sql2=" SELECT * FROM contentsreview";
     $result=mysqli_query($conn, $sql2);
     ?>
