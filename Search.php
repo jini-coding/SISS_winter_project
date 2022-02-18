@@ -74,6 +74,18 @@
     <?php
       while($row=mysqli_fetch_array($result)){
         if($row['title']==$search or $row['ott']==$search or $row['category']==$search){
+          if($row['ott']=='netflix'){
+            $row['ott']='NETFLIX';
+          }
+          if($row['ott']=='tving'){
+            $row['ott']='TVING';
+          }
+          if($row['ott']=='watcha'){
+            $row['ott']='WATCHA';
+          }
+          if($row['ott']=='disney+'){
+            $row['ott']='DISNEY+';
+          }
     ?>
           <tr>
             <td><?php echo $row['ott']?></td>
