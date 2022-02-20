@@ -1,5 +1,5 @@
 <?php
-$conn = mysqli_connect("127.0.0.1", "root", "yunjin424", "contents_review");
+$conn = mysqli_connect("localhost", "root", "비밀", "contents_review");
 
 
 function mq($sql)
