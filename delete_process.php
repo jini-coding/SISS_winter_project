@@ -10,8 +10,8 @@ $result=mysqli_query($conn, $sql);
 
 ?>
 
-<script type="text/javascript"> // alert창 작동 안됨
-   if ($result === ture) {
+<script type="text/javascript">
        alert("삭제되었습니다.");
-   } </script>
+</script>
 <meta http-equiv="refresh" content="0 url=review_page.php">
+
