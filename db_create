@@ -71,6 +71,6 @@ INSERT INTO review_list(title, ott, category, score, comments, created) VALUES('
 
 
 
-// 전체 
+// 전체 보기
 SELECT * FROM review_list;
 
