@@ -150,9 +150,9 @@ function mq($sql)
 </div>
 
 <div id="option">
-<span><a href="review_page.php">목록</a></span>
-<span><a href="modify_review.php?id=<?php echo $board['id']; ?>">수정</a></span>
-<span><a href="delete_process.php?id=<?php echo $board['id']; ?>">삭제</a></span>
+<button onclick="history.back();">목록</a></button>
+<button><a href="modify_review.php?id=<?php echo $board['id']; ?>">수정</a></button>
+<button><a href="delete_process.php?id=<?php echo $board['id']; ?>">삭제</a></button>
 </div>
 </div>
   </body>
